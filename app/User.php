@@ -6,8 +6,9 @@ use Illuminate\Notifications\Notifiable;
 
 use App\Model\Usuario\Users_detalle;
 use Auth;
+use Illuminate\Database\Eloquent\Model;
 
-class User
+class User extends Model
 {
     use Notifiable;
 
