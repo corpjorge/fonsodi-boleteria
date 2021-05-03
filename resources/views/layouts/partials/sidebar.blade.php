@@ -43,41 +43,7 @@ function current_page($url = '/'){
                         </li>
                       @endif
                     @endforeach
-                @elseif(Auth::guard('admin_user')->user()->id == 50)
-                <ul class="sidebar-menu">
-                    <li class="treeview">
-                        <a href="#"><i class='fa fa-codepen'></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{url('solicitudes/solicitados')}}">Solicitudes</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li><a href="#">Desembolsos</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                @elseif(Auth::guard('admin_user')->user()->id == 22)
-                <ul class="sidebar-menu">
-                    <li class="treeview">
-                        <a href="#"><i class='fa fa-codepen'></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{url('solicitudes/solicitados')}}">Solicitudes</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li><a href="{{url('solicitudes/desembolso')}}">Desembolsos</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- Este condicional muestra el acceso a la ruta que puede acceder el usuario
-                    1. Pasamos el id del usuario que tiene el permiso
-                    2. Creamos la ruta de la vista a mostrar para el usuario
-                -->
-               @elseif(Auth::guard('admin_user')->user()->id == 23)
-                <ul class="sidebar-menu">
-                    <li class="treeview">
-                        <a href="#"><i class='fa fa-codepen'></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ url('solicitudes/solicitados/7')}}">Servicios confirmados</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                                   
             @else
                 @foreach ($adminpermisos as $adminpermiso)
                     @foreach ($menu_admins as $menu_admin)

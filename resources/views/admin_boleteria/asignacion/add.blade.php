@@ -11,7 +11,7 @@
     <small>Asignar seriales</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('/admin_boleteria')}}">Boletería</a></li>
         <li><a href="{{ url('admin_boleteria/asignacion')}}">Asignacion</a></li>
 				<li class="active"><a href="#">Añadir</a></li>

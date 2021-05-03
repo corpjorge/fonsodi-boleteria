@@ -9,7 +9,7 @@
     <h1>Añadir
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('/admin_config/areas_admin')}}">Configuracion</a></li>
 				<li><a href="{{ url('/admin_config/areas_admin')}}">Areas de administrador</a></li><!-- Lugar -->
         <li class="active"><a href="#">Añadir</a></li>

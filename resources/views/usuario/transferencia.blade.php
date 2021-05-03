@@ -11,7 +11,7 @@
     <small>Revisa tu trasferencia solidaria</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 				<li><a href="{{ url('/home')}}">Inicio</a></li>
         <li class="active"><a href="#">Transferencia solidaria</a></li>
     </ol>

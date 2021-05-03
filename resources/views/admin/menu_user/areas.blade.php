@@ -10,7 +10,7 @@
     <small>Configuracion de Areas de administrador</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('/admin_config/areas_admin')}}">Configuracion</a></li>
         <li class="active"><a href="#">Areas de administrador</a></li>
     </ol>

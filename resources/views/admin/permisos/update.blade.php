@@ -10,7 +10,7 @@
     <small>Editar Permiso</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('admin_config/permisos')}}">Configuracion</a></li>
 			  <li><a href="{{ url ('admin_config/permisos')}}">Permiso</a></li>
         <li class="active"><a href="#">Editar</a></li>

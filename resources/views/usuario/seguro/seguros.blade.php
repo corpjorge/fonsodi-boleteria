@@ -11,7 +11,7 @@
     <small>Solicite su seguro</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="#">Seguros</a></li>
     </ol>
 </section>

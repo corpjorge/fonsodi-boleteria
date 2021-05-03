@@ -10,7 +10,7 @@
     <h1>Editar
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('admin_config/permisos')}}">Configuracion</a></li>
 			  <li><a href="{{ url ('admin_config/permisos')}}">areas_admin</a></li><!-- ____Lugar ___ -->
         <li class="active"><a href="#">Editar</a></li>

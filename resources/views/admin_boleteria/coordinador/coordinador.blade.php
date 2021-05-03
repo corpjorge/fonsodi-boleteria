@@ -11,7 +11,7 @@
     <small>Asignaciones realizadas</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('/admin_boleteria')}}">Boletería</a></li>
         <li class="active"><a href="#">Coordinador</a></li>
     </ol>

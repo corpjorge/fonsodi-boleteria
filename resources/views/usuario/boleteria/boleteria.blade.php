@@ -11,7 +11,7 @@
     <small>Resumen de tus boletas adquiridas</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 				<li><a href="{{ url('/boleteria')}}">Boletería</a></li>
     </ol>
 </section>

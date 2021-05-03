@@ -10,7 +10,7 @@
     <small>Solicite su PQRS</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="#">PQRS</a></li>
     </ol>
 </section>

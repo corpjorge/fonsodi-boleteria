@@ -11,7 +11,7 @@
     <small>Inscríbete al evento que deseas asistir</small>
     </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> {{ trans('message.level') }}</li>
+        <li><i class="fa fa-dashboard"></i> {{ trans('Paginal') }}</li>
 		<li><a href="{{ url('/inscripcion')}}">Eventos</a></li>
 
     </ol>
