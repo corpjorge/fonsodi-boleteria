@@ -21,10 +21,8 @@ class AsignarController extends Controller
      */
     public function index()
     {
-        $seriales  = Serial::where('estado_actual_id', '!=', 1)->where('admin_user_id', '!=', '')->where('estado_actual_id', '!=', 5)->get();
-       //dd($seriales);
-        $productos  = Producto::all();
-        //dd($productos);
+        $seriales  = Serial::where('estado_actual_id', '!=', 1)->where('admin_user_id', '!=', '')->where('estado_actual_id', '!=', 5)->get();    
+        $productos  = Producto::all();      
         return view('admin_boleteria.asignacion.asignacion', 
         ['seriales' => $seriales, 'productos' => $productos]);
     }
@@ -35,11 +33,7 @@ class AsignarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create($id)
-    {
-        /*
-        $seriales  = Serial::all()->where('admin_user_id', '=', '')->where('estado_actual_id', '!=', 1)->where('estado_actual_id', '!=', 5);
-        $productos  = Producto::all();
-        */
+    {        
         $seriales  = Serial::all()->where('admin_user_id', '=', '')->where('estado_actual_id', '!=', 1)->where('estado_actual_id', '!=', 5)->where('producto_id',$id);
         $producto  = Producto::find($id);
         $admin_usuarios  = AdminUser::all();
@@ -76,7 +70,6 @@ class AsignarController extends Controller
               'created_at' =>  $fecha_created_at,
             ]
         );
-
             DB::table('seriales')->where('id', $serials)->update(
             [
               'admin_user_id' => $request->usuario,

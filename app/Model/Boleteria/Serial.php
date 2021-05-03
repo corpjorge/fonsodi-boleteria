@@ -39,8 +39,7 @@ class Serial extends Model
   {
      return $this->hasMany('App\Model\Boleteria\Asignacion');
   }
-
-
+  
   public static function boletasDisponibles()
   {
     $resultado = array();
@@ -57,7 +56,4 @@ class Serial extends Model
     }
     return $productos = array_unique($resultado);
   }
-
-
-
 }

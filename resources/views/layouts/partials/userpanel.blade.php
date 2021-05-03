@@ -18,7 +18,5 @@
         @else
         <p>{{ Auth::user()->social_name }}</p>
         @endif
-        <!-- Status -->
-        <a href="#"><i class="fa fa-circle text-success"></i> {{ trans('message.online') }}</a>
     </div>
 </div>

@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Boleteria\Serial;
 use App\Model\Boleteria\Producto;
-use App\Model\Boleteria\Proveedor;
-use App\Model\Boleteria\Asignacion;
-
 use Validator;
 use DB;
 use Carbon\Carbon;
@@ -21,10 +18,8 @@ class SerialController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //$seriales  = Serial::all()->where('admin_user_id', '=' ,'');
-        $seriales = Serial::where('admin_user_id', '=' ,'')->get();
-        //dd($seriales);
+    {        
+        $seriales = Serial::where('admin_user_id', '=' ,'')->get();    
         return view('admin_boleteria.seriales.seriales',[ 'seriales' => $seriales]);
     }
 
@@ -58,9 +53,7 @@ class SerialController extends Controller
      */
     public function store(Request $request)
     {
-
         $serial = new Serial;
-
         $NumeroInicial = $request->NumeroInicial;
         $NumeroFinal   = $request->NumeroFinal;
         $cantidad      = $request->cantidad;
@@ -106,7 +99,6 @@ class SerialController extends Controller
             'fecha_caducidad' => 'required|date|',
           ]);
 
-
         $fecha_created_at = Carbon::now();
 
         for ($i = $NumeroInicial; $i <= $NumeroFinal; ++$i) {
@@ -124,14 +116,12 @@ class SerialController extends Controller
                     'created_at' =>  $fecha_created_at,
                   ]
               );
-
         }
-
+        
          session()->flash('message', 'Guardado correctamente');
          return redirect('admin_boleteria/seriales');
 
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -169,8 +159,6 @@ class SerialController extends Controller
 
       session()->flash('message', 'Guardado correctamente');
       return redirect('admin_boleteria/seriales');
-
-
     }
 
 
@@ -230,6 +218,4 @@ class SerialController extends Controller
         session()->flash('message', 'Actualizado correctamente');
         return redirect('admin_boleteria/seriales/ver/'.$id.'/edit');
     }
-
-
 }

@@ -34,9 +34,7 @@ class CoordinadorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function aprobar(Request $request)
-    {
-        
-        
+    {   
         for ($i=0; $i < count($request->serial); $i++) { 
        
         $serial = Serial::where('admin_user_id', '=', Auth::guard('admin_user')->user()->id)->where('id', $request->serial[$i])->first();
@@ -49,9 +47,7 @@ class CoordinadorController extends Controller
         $asignacion->estado_id = 1;
         $asignacion->save();
         }
-      
         
-
         return redirect('admin_boleteria/coordinador');
          
     }
@@ -69,12 +65,10 @@ class CoordinadorController extends Controller
             $asignacion->admin_user_id = Auth::guard('admin_user')->user()->id;
             $asignacion->serial_id = $serial->id;
             $asignacion->estado_id = 1;
-            $asignacion->save();
- 
-        }
-              
-        return redirect('admin_boleteria/coordinador');
+            $asignacion->save(); 
+        }              
         
+        return redirect('admin_boleteria/coordinador');        
     }
 
     /**
@@ -103,7 +97,4 @@ class CoordinadorController extends Controller
       $seriales  = Serial::all()->where('admin_user_id', '=', $id)->where('estado_actual_id', '!=', 5);
       return view('admin_boleteria.coordinador-admin.add', [ 'seriales' => $seriales]);
     }
-
-
-
 }

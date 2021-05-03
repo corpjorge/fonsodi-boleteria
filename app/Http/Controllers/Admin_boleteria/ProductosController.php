@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Model\Boleteria\Producto;
 use App\Model\Boleteria\Proveedor;
 
-use Validator;
-
 class ProductosController extends Controller
 {
     /**
@@ -103,6 +101,4 @@ class ProductosController extends Controller
         session()->flash('message', 'Actualizado correctamente');
         return redirect('admin_boleteria/productos/ver/'.$id.'/edit');
     }
-
-
 }

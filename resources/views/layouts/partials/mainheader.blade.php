@@ -114,12 +114,8 @@
                 <li><a href="{{ url('/register') }}">{{ trans('message.register') }}</a></li>
                 <li><a href="{{ url('/login') }}">{{ trans('message.login') }}</a></li>
                     <!-- User Account Menu -->
-                @endif
-
-                <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar" style="font-size: 18px; cursor: help;"><i class="fa fa-question-circle"></i></a>
-                </li>
+                @endif 
+                
             </ul>
         </div>
     </nav>

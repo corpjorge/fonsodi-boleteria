@@ -14,7 +14,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> errores<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -24,34 +24,27 @@
         @endif
 
         <div class="login-box-body">
-        <p class="login-box-msg"> {{ trans('message.siginsession') }} </p>
+        <p class="login-box-msg"> Iniciar sesión </p>
         <form action="{{ url('/admin_login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email"/>
+                <input type="email" class="form-control" placeholder="email" name="email"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="{{ trans('message.password') }}" name="password"/>
+                <input type="password" class="form-control" placeholder="password" name="password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox" name="remember"> {{ trans('message.remember') }}
-                        </label>
-                    </div>
-                </div><!-- /.col -->
+            <div class="row">                 
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.buttonsign') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div><!-- /.col -->
             </div>
         </form>
 
         @include('admin-auth.partials.social_login')
 
-        <a href="{{ url('/admin_password/reset') }}">{{ trans('message.forgotpassword') }}</a><br>       
+        <a href="{{ url('/admin_password/reset') }}">Olvidaste tu contraseña</a><br>       
 
     </div><!-- /.login-box-body -->
 

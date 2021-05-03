@@ -13,8 +13,7 @@ class Asignacion extends Model
    * @var array
    */
   protected $fillable = [
-      'name', 'admin_user_id', 'serial_id','estado_id',
-
+      'name', 'admin_user_id', 'serial_id','estado_id'
   ];
 
   public function asignacion_admin_users()

@@ -22,7 +22,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> errores<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -32,7 +32,7 @@
         @endif
 
         <div class="login-box-body">
-            <p class="login-box-msg">{{ trans('message.passwordreset') }}</p>
+            <p class="login-box-msg">Restablecer la contraseña</p>
             <form action="{{ url('/admin_password/reset') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="token" value="{{ $token }}">
@@ -55,15 +55,14 @@
                     <div class="col-xs-2">
                     </div><!-- /.col -->
                     <div class="col-xs-8">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.passwordreset') }}</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Restablecer contraseña</button>
                     </div><!-- /.col -->
                     <div class="col-xs-2">
                     </div><!-- /.col -->
                 </div>
             </form>
 
-            <a href="{{ url('/admin_login') }}">Log in</a><br>
-            <a href="{{ url('/admin_register') }}" class="text-center">{{ trans('message.membreship') }}</a>
+            <a href="{{ url('/admin_login') }}">Iniciar sesión</a><br>          
 
         </div><!-- /.login-box-body -->
 

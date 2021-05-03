@@ -1,28 +1,12 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
- */
-
 Route::get('/', function () {
 
     return view('welcome');
 });
 
-
 Route::post('login_ws', 'Usuario\LoginController@login_ws');
 Route::group(['middleware' => 'auth'], function () {
-    //    Route::get('/link1', function ()    {
-    //        // Uses Auth Middleware
-    //    });
-    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 
     Route::get('perfil', 'Usuario\Users_detalleController@index');
@@ -51,25 +35,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('boleteria/ver/pdf/{id}', 'Usuario\BoleteriaController@imp');
         Route::get('boleteria/productos/add', 'Usuario\BoleteriaController@create');
         Route::post('boleteria/productos/add', 'Usuario\BoleteriaController@store');
-
-        //Route::get('solicitud/productos', 'SolicitudProducto\SolicitudController@index');
+        
         Route::get('solicitud/productos')->uses('SolicitudProducto\SolicitudController@index')->name('solicitud.index');
-
-       // Route::get('solicitud/solicitar', 'SolicitudProducto\SolicitudController@create');
+        
         Route::get('solicitud/solicitar')->uses('SolicitudProducto\SolicitudController@create')->name('solicitud.create');
-
-       // Route::post('solicitud/solicitar', 'SolicitudProducto\SolicitudController@store');
-         Route::post('solicitud/solicitar')->uses('SolicitudProducto\SolicitudController@store')->name('solicitud.store');
+        
+        Route::post('solicitud/solicitar')->uses('SolicitudProducto\SolicitudController@store')->name('solicitud.store');
 
         Route::post('solicitud/productos/codigo/{id}', 'SolicitudProducto\SolicitudController@codigo');
         Route::get('solicitud/comprobante/{id}', 'SolicitudProducto\SolicitudController@show');
-
-        //Rutas polla mundial
+        
         Route::get('predictions/create')->uses('Usuario\PollaController@create')->name('predictions.create');
         Route::post('predictions/store')->uses('Usuario\PollaController@store')->name('predictions.store');
         Route::get('predictions/{polla}')->uses('Usuario\PollaController@show')->name('predictions.show');
-        
-
     });
 
     Route::get('seguros', 'Seguro\SolicitudController@segurosvista');
@@ -97,17 +75,6 @@ Route::group(['middleware' => 'adminuser'], function () {
     Route::get('datos_usuario/{id}', 'Usuario\Users_detalleController@datosUsuario');
     Route::get('solicitud/comprobante-adm/{id}', 'SolicitudProducto\SolicitudController@show');
 
-    /** jpiedrahita */
-    Route::get('predictions')->uses('Usuario\PollaController@index')->name('predictions.index');
-    Route::get('excel','Usuario\PollaController@polla');
-
-    Route::group(['middleware' => 'proveedor'], function () {
-        /**
-         * Aca se crean las rutas correspondientes al manejo de las lineas
-         * de los proveedores y se complemetan con las vistas
-         */
-    });
-
     Route::group(['middleware' => 'coordinador'], function () {
         Route::get('admin_evento', 'Evento\EventoController@indexadmin');
         Route::get('admin_evento/add', 'Evento\EventoController@create');
@@ -127,7 +94,6 @@ Route::group(['middleware' => 'adminuser'], function () {
         Route::get('solicitudes/solicitados', 'SolicitudProducto\SolicitudController@solicitudes');
         Route::get('solicitudes/productos', 'SolicitudProducto\ProductoController@index');
 
-
         Route::get('solicitudes/productos/add', 'SolicitudProducto\ProductoController@create');
         Route::get('solicitudes/productos/{id}/edit', 'SolicitudProducto\ProductoController@edit');
         Route::post('solicitudes/productos/update/{id}', 'SolicitudProducto\ProductoController@update');
@@ -135,7 +101,6 @@ Route::group(['middleware' => 'adminuser'], function () {
 
         Route::post('solicitudes/productos/activar/{id}', 'SolicitudProducto\ProductoController@activar');
         Route::post('solicitudes/productos/add')->uses('SolicitudProducto\ProductoController@store')->name('productos.store');
-
 
         Route::post('solicitudes/solicitados/aprobar', 'SolicitudProducto\SolicitudController@aprobar');
         Route::get('solicitudes/solicitados-excel', 'SolicitudProducto\SolicitudController@excel');
@@ -155,21 +120,14 @@ Route::group(['middleware' => 'adminuser'], function () {
         Route::get('solicitudes/desembolso/{id}', 'SolicitudProducto\SolicitudController@desembolsar');
 
         Route::post('solicitudes/desembolso/{id}', 'SolicitudProducto\SolicitudController@udpateDesembolsar');
-
-
     });
-
-
 
     Route::group(['namespace' => 'Admin_boleteria'], function () {
         Route::group(['middleware' => 'jefe'], function () {
             Route::get('admin_boleteria/inventario', 'InformeController@inventario');
             Route::get('admin_boleteria/inventario/excel/seriales', 'InformeController@serialesexcel');
             Route::get('admin_boleteria/inventario/excel/ventas', 'InformeController@ventasesexcel');
-
-            /*jpiedrahita*/
-            Route::get('admin_boleteria/inventario/tenencia', 'InformeController@tenenciaexcel');
-
+            
             Route::get('admin_boleteria/proveedores', 'ProveedorController@index');
             Route::get('admin_boleteria/proveedores/add', 'ProveedorController@create');
             Route::post('admin_boleteria/proveedores/add/linea', 'ProveedorController@linea');
@@ -187,8 +145,7 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::get('admin_boleteria/productos/ver/{id}', 'ProductosController@show');
             Route::put('admin_boleteria/productos/{id}', 'ProductosController@update');
             Route::get('admin_boleteria/productos/ver/{id}/edit', 'ProductosController@edit');
-
-            //Route::get('admin_boleteria/seriales', 'SerialController@index');
+            
             Route::get('admin_boleteria/seriales')->uses('SerialController@index')->name('admin_boleteria.seriales');
 
             Route::get('admin_boleteria/seriales/add/', 'SerialController@create');
@@ -197,8 +154,6 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::get('admin_boleteria/seriales/ver/{id}', 'SerialController@show');
             Route::put('admin_boleteria/seriales/{id}', 'SerialController@update');
             Route::get('admin_boleteria/seriales/ver/{id}/edit', 'SerialController@edit');
-
-            //Route::get('admin_boleteria/asignacion', 'AsignarController@index');
 
             Route::get('admin_boleteria/asignacion')->uses('AsignarController@index')->name('admin_boleteria.asignacion');
 
@@ -212,16 +167,13 @@ Route::group(['middleware' => 'adminuser'], function () {
         });
         Route::group(['middleware' => 'coordinador'], function () {
             Route::get('admin_boleteria/coordinador', 'CoordinadorController@index');
-            //Route::put('admin_boleteria/coordinador/aprobar/{id}', 'CoordinadorController@aprobar');
             Route::put('admin_boleteria/coordinador/aprobar/', 'CoordinadorController@aprobar');
             Route::get('admin_boleteria/coordinador/aprobarTodos/', 'CoordinadorController@aprobarTodos');
             Route::put('admin_boleteria/coordinador/negar/{id}', 'CoordinadorController@negar');
 
             Route::get('admin_boleteria/vender', 'VenderController@index');
-            //Route::get('admin_boleteria/vender/add', 'VenderController@create');
             Route::get('admin_boleteria/vender/add', 'VenderController@vender');
             Route::get('admin_boleteria/vender/add/{id}', 'VenderController@venderProducto');
-            //Route::post('admin_boleteria/vender/add', 'VenderController@store');
             Route::get('admin_boleteria/vender/add/asociado/{cedula}', 'VenderController@asociadoCedula');
             Route::post('admin_boleteria/vender/servicio/{id}', 'VenderController@servicio');
             Route::post('admin_boleteria/vender/credito/{id}', 'VenderController@credito');
@@ -245,13 +197,8 @@ Route::group(['middleware' => 'adminuser'], function () {
       Route::resource('admin_config/menu_user_sub', 'Admin\ConfigSubMenuController',['except' => ['destroy']]);
       Route::resource('admin_config/menu_admin', 'Admin\ConfigMenuAdminController',['except' => ['destroy']]);
       Route::resource('admin_config/menu_admin_sub', 'Admin\ConfigSubMenuAdminController',['except' => ['destroy']]);
-
-
     });
 });
-
-
-
 
 //login admin
 Route::get('admin_login', 'AdminAuth\LoginController@showLoginForm');
@@ -274,12 +221,3 @@ Route::group(['namespace' => 'Usuario'], function () {
 });
 Route::get('clasificados', 'Servicio\ClasificadoController@index');
 Route::get('cumple', 'Servicio\ServicioController@cumple');
-
-
-
-//Acces to Web Service Controller
-Route::post('ws/consumo', 'WebServiceController@guardarConsumo');
-Route::post('ws/cupo', 'WebServiceController@obtenerCupoWebService');
-Route::post('ws/compras', 'WebServiceController@obtenerComprasWebService');
-Route::post('ws/login', 'WebServiceController@login_service');
-Route::get('ws/json', 'WebServiceController@getdatajson');

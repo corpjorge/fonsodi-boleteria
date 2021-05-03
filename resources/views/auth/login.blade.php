@@ -18,7 +18,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> error<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -29,14 +29,14 @@
         @endif
 
         @if(session()->has('message'))
-    		 <div class="alert alert-danger alert-dismissible">
-    							 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    							 {{session()->get('message')}}
-    						 </div>
-    		@endif
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{session()->get('message')}}
+        </div>
+        @endif
 
         <div class="login-box-body" style="border-radius: 10px;" >
-        <p class="login-box-msg"> {{ trans('message.siginsession') }} </p>
+        <p class="login-box-msg"> Iniciar sesión </p>
         <form action="{{ url('/login_ws') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
@@ -44,26 +44,19 @@
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input style="color:black" type="password" class="form-control" placeholder="{{ trans('message.password') }}" name="password"/>
+                <input style="color:black" type="password" class="form-control" placeholder="password" name="password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox" name="remember"> {{ trans('message.remember') }}
-                        </label>
-                    </div>
-                </div><!-- /.col -->
+            <div class="row">               
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.buttonsign') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-sm btn-block btn-flat">Entrar</button>
                 </div><!-- /.col -->
             </div>
         </form>
 
 
 
-        <a href="https://fonsodi.com.co/atencion/Pages/Account/RestablecerPasswordEmail.aspx">{{ trans('message.forgotpassword') }}</a><br>
+        <a href="https://fonsodi.com.co/atencion/Pages/Account/RestablecerPasswordEmail.aspx">Olvidaste tu contraseña</a><br>
         <a href="https://fonsodi.com.co/atencion/Pages/Afiliacion/afiliacion.aspx">¿No eres asociado? Afíliate aquí</a><br>
         <a href="https://fonsodi.com.co/atencion/Pages/Account/Registro.aspx">¿Eres asociado y no tienes cuenta? Solicítala Aquí</a><br>
 

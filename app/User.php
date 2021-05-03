@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-
 use App\Model\Usuario\Users_detalle;
 use Auth;
 use Illuminate\Database\Eloquent\Model;
@@ -30,7 +29,6 @@ class User extends Model
         'password', 'remember_token',
     ];
 
-
     public function usuario_rol()
     {
         return $this->belongsTo('App\Model\Sistema\Rol','role_id');
@@ -55,5 +53,4 @@ class User extends Model
     {
         return $this->hasMany('App\Model\Boleteria\Venta', 'user_id');
     }
-
 }

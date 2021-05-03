@@ -28,5 +28,4 @@ class Venta extends Model
   {
       return $this->hasMany('App\Model\Boleteria\Venta_detalle');
   }
-
 }

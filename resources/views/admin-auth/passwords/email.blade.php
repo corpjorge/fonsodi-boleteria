@@ -22,7 +22,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> error<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -32,8 +32,8 @@
         @endif
 
         <div class="login-box-body">
-            <p class="login-box-msg">Reset Password</p>
-            <form action="{{ url('admin_password/email') }}" method="post">
+            <p class="login-box-msg">Restablecer la contraseña</p>
+            <form action="{{ url('admin_password/email') }}" method="post" >
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
                     <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>
@@ -44,7 +44,7 @@
                     <div class="col-xs-2">
                     </div><!-- /.col -->
                     <div class="col-xs-8">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('message.sendpassword') }}</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Restablecer contraseña</button>
                     </div><!-- /.col -->
                     <div class="col-xs-2">
                     </div><!-- /.col -->

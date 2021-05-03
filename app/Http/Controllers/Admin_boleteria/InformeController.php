@@ -50,8 +50,7 @@ class InformeController extends Controller
             $ano             = $dt->year;
             $ahorroasociados = $valorpublico - $valorventas;
             $ahorrofondo     = $valorventas - $valorcompra;
-            
-            
+                        
             return view(
                 'admin_boleteria.informe.coordinador',
                 compact(
@@ -78,9 +77,7 @@ class InformeController extends Controller
                     'ventatablas'
                 )
             );
-        } 
-        
-        else {
+        } else {
             $ventatotal   = Serial::where('admin_user_id', Auth::guard('admin_user')->user()->id)->where('estado_actual_id', 5)->count();
             $inventario   = Serial::where('admin_user_id', Auth::guard('admin_user')->user()->id)->where('estado_actual_id', 1)->count();
             $pendientes   = Serial::where('admin_user_id', Auth::guard('admin_user')->user()->id)->where('estado_actual_id', 3)->count();
@@ -101,15 +98,10 @@ class InformeController extends Controller
             $noviembre    = DB::table('seriales')->whereMonth('updated_at', 11)->whereYear('updated_at', $dt->year)->where('estado_actual_id', 5)->where('admin_user_id', Auth::guard('admin_user')->user()->id)->count();
             $diciembre    = DB::table('seriales')->whereMonth('updated_at', 12)->whereYear('updated_at', $dt->year)->where('estado_actual_id', 5)->where('admin_user_id', Auth::guard('admin_user')->user()->id)->count();
             $ventatablas = Venta::where('admin_user_id', '=', Auth::guard('admin_user')->user()->id)->orderBy('id', 'desc')->paginate(7);
-            
-            //dd($ventatablas);
-
             $ano             = $dt->year;
             $ahorroasociados = $valorpublico - $valorventas;
             $ahorrofondo     = $valorventas - $valorcompra;
             
-           
-
             return view(
                 'admin_boleteria.informe.coordinador',
                 compact(
@@ -136,8 +128,6 @@ class InformeController extends Controller
                     'ventatablas'
                 )
             );
-
-            // $users = DB::table('seriales')->select(DB::raw('EXTRACT(MONTH FROM `fecha_caducidad`)'));
         }
     }
 
@@ -289,8 +279,7 @@ class InformeController extends Controller
                 ->join('admin_users as a', 'a.id', '=', 'v.admin_user_id')
                 ->leftJoin('users_detalles as u', 'u.id', '=', 'v.user_id')
                 ->select('s.numero as serial', 's.precio_venta as precio', 'p.nombre as producto', 'a.email as coordinador', 'u.cod_persona as usuario', 'v.radicado as radicado', 'v.created_at as fecha')
-                ->where('s.estado_actual_id', '=', '5')
-                // ->whereIn(-'id''s.estado_actual_id', ['1', '5'])
+                ->where('s.estado_actual_id', '=', '5')               
                 ->orderBy('v.id', 'desc')
                 ->limit(1)
                 ->get();
@@ -301,10 +290,8 @@ class InformeController extends Controller
                 'Fecha' => isset($product->fecha) ? $product->fecha : "N/A",
                 'Radicado' => isset($product->radicado) ? $product->radicado : "N/A",
                 'Producto' => isset($product->producto) ? $product->producto : "N/A",
-                'Serial' => isset($product->serial) ? $product->serial : "N/A",
-                //'Cantidad' => 1,
-                'Valor' => isset($product->precio) ? $product->precio : "N/A",
-                //'Codigo Asociado' => isset($product->usuario) ? $product->usuario : "N/A", 
+                'Serial' => isset($product->serial) ? $product->serial : "N/A",               
+                'Valor' => isset($product->precio) ? $product->precio : "N/A",              
                 'Vendedor' => isset($product->coordinador) ? $product->coordinador : "N/A",
             ];
         }
@@ -336,8 +323,7 @@ class InformeController extends Controller
                 RIGHT OUTER JOIN seriales ON detalle.`serial_id` = seriales.id
                 LEFT OUTER JOIN admin_users ON ventas.`admin_user_id` = admin_users.id
                 LEFT OUTER JOIN productos ON seriales.producto_id = productos.id WHERE ventas.created_at > "2018-12-01 00:00:00";'
-            );
-     
+            );    
         
         foreach ($ventasDetalles as $ventasDetalle) {
 
@@ -367,17 +353,10 @@ class InformeController extends Controller
     }
     
     public function tenenciaexcel ()
-    {
-        /**
-         * Para poder descargar mas registro, se debe agrandar la memoria en el archivo
-         * php.ini del servidor en el campo de memory_limit = 128M
-         */
+    {        
         $date = date('Y-m-d');
         $inventarios = Serial::where('estado_actual_id', '!=', '5')
-            ->get();
-        /* $inventarios = Serial::where('fecha_caducidad', '>', $date)
-            ->where('estado_actual_id', '!=', '5')
-            ->get(); */
+            ->get();      
                         
         foreach ($inventarios as $inventario) {
 
@@ -387,7 +366,6 @@ class InformeController extends Controller
                 'Fecha vencimiento' => $inventario->fecha_caducidad,
                 'Responsable' => isset($inventario->serial_admin) ? $inventario->serial_admin->name : 'No Aplica'
             ];
-
         }         
         Excel::create('Inventario-tenencia',function ($excel) use ($tenencia) {
                 $excel->sheet('tenencia',function ($sheet) use ($tenencia) {
