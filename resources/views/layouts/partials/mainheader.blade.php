@@ -4,9 +4,9 @@
     <!-- Logo -->
     <a href="#" class="logo" data-toggle="offcanvas" role="button">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b style="color: #ff4949;">F</b>S</span>
+        <span class="logo-mini"><b>F</b>S</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b  style="color: #ff4949;" >Fon</b>sodi </span>
+        <span class="logo-lg">Fonsodi</span>
     </a>
 
     <!-- Header Navbar -->

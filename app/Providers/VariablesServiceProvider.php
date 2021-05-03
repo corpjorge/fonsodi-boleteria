@@ -11,10 +11,7 @@ use App\Model\Sistema\Alert_admin;
 use App\Model\Usuario\Users_detalle;
 use App\Model\Sistema\Menu_admin;
 use App\Model\Sistema\Menu_admin_sub;
-use App\AdminUser;
 use App\Model\Sistema\Permiso;
-use Illuminate\Support\Facades\Route;
-
 
 class VariablesServiceProvider extends ServiceProvider
 {
@@ -24,8 +21,7 @@ class VariablesServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //setlocale(LC_TIME, 'German');
+    {        
         $carbon           = new \Carbon\Carbon();
         \Carbon\Carbon::setLocale('es');
 
@@ -43,12 +39,10 @@ class VariablesServiceProvider extends ServiceProvider
         View::share('cumples', $cumples);
         View::share('menu_admin_subs', $menu_admin_subs);
         View::share('menu_admins', $menu_admins);   
-        //Auth::guard('admin_user')->user()->id
 
         if (Auth::check()) {}
           $adminpermisos   = Permiso::all();
           View::share('adminpermisos', $adminpermisos);
-
     }
 
     /**
