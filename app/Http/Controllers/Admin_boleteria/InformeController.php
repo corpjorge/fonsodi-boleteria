@@ -6,8 +6,7 @@ use App\AdminUser;
 use App\Http\Controllers\Controller;
 use App\Model\Boleteria\Producto;
 use App\Model\Boleteria\Serial;
-use App\Model\Boleteria\Venta;
-use App\Model\Boleteria\Venta_detalle;
+use App\Model\Boleteria\Venta; 
 use App\Model\Usuario\Users_detalle;
 use App\User;
 use Auth;
@@ -15,6 +14,8 @@ use DB;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use \Carbon\Carbon;
+use App\Exports\VentasExport;
+use App\Exports\InventarioExport;
 
 class InformeController extends Controller
 {
@@ -256,18 +257,10 @@ class InformeController extends Controller
             session()->flash('error', 'Resultado vacíos');
             return redirect()->back();
         }
+        
+        dd($result);
 
-        Excel::create(
-            'Seriale',
-            function ($excel) use ($result) {
-                $excel->sheet(
-                    'Seriale',
-                    function ($sheet) use ($result) {
-                        $sheet->fromArray($result);
-                    }
-                );
-            }
-        )->export('xls');
+       
     }
 
     public function ventasesexcelCopia()
@@ -299,80 +292,16 @@ class InformeController extends Controller
         if (empty($result)) {
             session()->flash('error', 'Resultado vacíos');
             return redirect()->back();
-        }
-
-        Excel::create(
-            'Ventas',
-            function ($excel) use ($result) {
-                $excel->sheet(
-                    'Ventas',
-                    function ($sheet) use ($result) {
-                        $sheet->fromArray($result);
-                    }
-                );
-            }
-        )->export('xls');
+        }         
     }
     
     public function ventasesexcel()
     {
-        $ventasDetalles = DB::select('
-                SELECT ventas.created_at,  ventas.radicado, productos.nombre, seriales.numero, seriales.precio_venta, admin_users.email
-                FROM `venta_detalles` detalle
-                RIGHT OUTER JOIN ventas ON detalle.`venta_id` = ventas.id
-                RIGHT OUTER JOIN seriales ON detalle.`serial_id` = seriales.id
-                LEFT OUTER JOIN admin_users ON ventas.`admin_user_id` = admin_users.id
-                LEFT OUTER JOIN productos ON seriales.producto_id = productos.id WHERE ventas.created_at > "2018-12-01 00:00:00";'
-            );    
-        
-        foreach ($ventasDetalles as $ventasDetalle) {
-
-           $result[] = $tabla = [
-               'Fecha'    => $ventasDetalle->created_at,
-               'Radicado' => $ventasDetalle->radicado,
-               'Producto' => $ventasDetalle->nombre,
-               'Serial'   => $ventasDetalle->numero,
-               'Valor'    => $ventasDetalle->precio_venta,
-               'Vendedor' => $ventasDetalle->email
-            ];
-        }
-
-      if(empty($result)){
-          session()->flash('error', 'Resultado vacíos');
-          return redirect()->back();
-        }
- 
-        Excel::create('Ventas', function($excel) use($result) {
-
-          $excel->sheet('Ventas', function($sheet) use($result) {
-                $sheet->fromArray($result);
-          });
-
-        })->export('xls');
-        
+        return Excel::download(new VentasExport, 'ventas.xlsx');         
     }
     
     public function tenenciaexcel ()
-    {        
-        $date = date('Y-m-d');
-        $inventarios = Serial::where('estado_actual_id', '!=', '5')
-            ->get();      
-                        
-        foreach ($inventarios as $inventario) {
-
-            $tenencia[] = $tabla = [
-                'Serial' => $inventario->numero,
-                'Producto' => $inventario->serial_producto->nombre,
-                'Fecha vencimiento' => $inventario->fecha_caducidad,
-                'Responsable' => isset($inventario->serial_admin) ? $inventario->serial_admin->name : 'No Aplica'
-            ];
-        }         
-        Excel::create('Inventario-tenencia',function ($excel) use ($tenencia) {
-                $excel->sheet('tenencia',function ($sheet) use ($tenencia) {
-                        $sheet->fromArray($tenencia);
-                    }
-                );
-            }
-        )->export('xls'); 
+    {
+        return Excel::download(new InventarioExport, 'Inventario.xlsx');
     }
 }

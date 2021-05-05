@@ -78,7 +78,7 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::get('admin_boleteria/inventario', 'InformeController@inventario');
             Route::get('admin_boleteria/inventario/excel/seriales', 'InformeController@serialesexcel');
             Route::get('admin_boleteria/inventario/excel/ventas', 'InformeController@ventasesexcel');
-            
+            Route::get('admin_boleteria/inventario/tenencia', 'InformeController@tenenciaexcel');            
             Route::get('admin_boleteria/proveedores', 'ProveedorController@index');
             Route::get('admin_boleteria/proveedores/add', 'ProveedorController@create');
             Route::post('admin_boleteria/proveedores/add/linea', 'ProveedorController@linea');

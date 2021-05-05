@@ -9,22 +9,7 @@
 		<div class="row">
 
 				<section class="content">
-					<div class="row">
-						<div class="col-md-12">
-							<!-- BAR CHART -->
-							<div class="box box-success">
-								<div class="box-header with-border">
-									<h3 class="box-title">Usuarios (Inventario VS Ventas)</h3>
-								</div>
-								<div class="box-body">
-									<div class="chart">
-										<canvas id="barChart" style="height:230px"></canvas>
-									</div>
-								</div>
-								<!-- /.box-body -->
-							</div>
-							<!-- /.box -->
-						</div>
+					<div class="row">						 
 						<div class="col-md-6">
 							<!-- DONUT CHART -->
 							<div class="box box-danger">
