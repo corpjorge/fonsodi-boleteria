@@ -60,9 +60,6 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                       <li><a href="/admin_home">{{ Auth::guard('admin_user')->user()->name }}</a></li>
                     @elseif (! Auth::guest())
                         <li><a href="/home">{{ Auth::user()->name }}</a></li>
-                    @else
-                        <li><a href="{{ url('/login') }}">{{ trans('message.login') }}</a></li>
-                        <li><a href="{{ url('/register') }}">{{ trans('message.register') }}</a></li>
                     @endif
                 </ul>
             </div><!--/.nav-collapse -->

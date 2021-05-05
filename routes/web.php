@@ -1,14 +1,14 @@
 <?php
-
-Route::get('/', function () {
-
-    return view('welcome');
-});
+ 
+ Route::get('/', 'LoginController@redirect');
+ Route::get('/login', 'LoginController@login')->name('login');
 
 Route::post('login_ws', 'Usuario\LoginController@login_ws');
 Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
-    Route::get('/home', 'HomeController@index');
+   
+    Route::get('/home', 'HomeController@index');    
+    Route::post('/logout', 'LoginController@logout')->name('logout');
     Route::get('perfil', 'Usuario\Users_detalleController@index');
     Route::get('noasicado', 'Usuario\NoasociadoController@index');
     Route::get('error404', 'Usuario\NoasociadoController@error');

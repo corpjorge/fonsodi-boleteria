@@ -27,26 +27,17 @@
                @else
                 {{ Auth::user()->social_name }}
                @endif
-                <small>{{ trans('message.login') }} {{$carbon->format('Y-m-d')}}</small>
+                
             </p>
         </li>
         <!-- Menu Body -->
 
         <!-- Menu Footer-->
-        <li class="user-footer">
-            <div class="pull-left">
-                <a href="{{ url('/perfil') }}" class="btn btn-default btn-flat">{{ trans('message.profile') }}</a>
-            </div>
-            <div class="pull-right">
-                <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
-                   onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                    {{ trans('message.signout') }}
-                </a>
-
-                <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+        <li class="user-footer">             
+            <div class="pull-right"> 
+                <form id="logout-form" action="{{ url('logout') }}" method="POST">
                     {{ csrf_field() }}
-                    <input type="submit" value="logout" style="display: none;">
+                    <input class="btn btn-block btn-default" type="submit" value="Cerrar sesión">
                 </form>
 
             </div>
