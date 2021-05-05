@@ -2,7 +2,7 @@
     <div class="pull-left image">
 
       @if(Auth::user()->avatar == '')
-          <img src="{{ asset('/img/avatar0.png') }}" class="img-circle" alt="User Image" />
+          <img src="https://ui-avatars.com/api/?size=128&color=222d32&background=ecf0f5&&name={{ Auth::user()->name }}" class="img-circle" alt="User Image" />
       @else
       <img src="{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" />
       @endif

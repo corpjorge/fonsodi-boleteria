@@ -59,37 +59,7 @@
 		         </div>
 
 
-		@foreach ($menu_users as $menu_user)
-			  @if ($menu_user->estado->id == '1' )
-					@if($menu_user->area_id == 1)
-						<div class="col-lg-3 col-xs-6">
-							<div class="small-box {{$menu_user->estilo}}">
-								<div class="inner">
-									<h4>Perfil</h4>
-									<p>Mi perfil</p>
-								</div>
-								<div class="icon">
-									<i class="fa {{$menu_user->icono}}"></i>
-								</div>
-								<a href="{{ url('perfil') }}"class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					@else
-						<div class="col-lg-3 col-xs-6">
-						  <div class="small-box {{$menu_user->estilo}}">
-						    <div class="inner">
-						      <h4>{{$menu_user->area->name}}</h4>
-						      <p>{{$menu_user->area->descripcion}}</p>
-						    </div>
-						    <div class="icon">
-						      <i class="fa {{$menu_user->icono}}"></i>
-						    </div>
-						    <a href="{{ url($menu_user->ruta) }}"class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
-						  </div>
-						</div>
-					@endif
-				@endif
-		@endforeach
+		<div class="col-lg-3 col-xs-6"><div class="small-box bg-aqua"><div class="inner"><h4>BOLETERIA</h4> <p>Modulo de Boletaria</p></div> <div class="icon"><i class="fa fa-ticket"></i></div> <a href="http://fonsodi-boleteria.test/boleteria" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a></div></div>
 
 		<div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-navy">

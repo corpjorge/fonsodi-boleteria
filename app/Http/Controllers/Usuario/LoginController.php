@@ -24,12 +24,13 @@ class LoginController extends Controller
           'cedula' => 'required|numeric',
           'password' => 'required|string',
       ]);
-
-
+   
       $url = "http://190.145.4.62/WebServicesFonsodi/WSlogin.asmx/Logeo?pEntidad=FONSODI&pIdentificacion=".$request->cedula."&pClave=".$request->password."&pTipoUsuario=2";
       $url = str_replace(" ", "%20", $url);
       $response_xml_data = file_get_contents($url);
       $xml = simplexml_load_string($response_xml_data);
+      
+     
 
       if($xml == 'true'){
 
@@ -114,7 +115,8 @@ class LoginController extends Controller
           $usuario_cedula->estado_civil_id = $xml_datos->codestadocivil;
           $usuario_cedula->save();
 
-          auth()->login($usuario);
+          auth()->login($usuario);  
+          
           return redirect()->To('home');
         }
 

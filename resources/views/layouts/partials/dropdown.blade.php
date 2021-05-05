@@ -3,7 +3,7 @@
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
         <!-- The user image in the navbar-->
         @if(Auth::user()->avatar == '')
-          <img src="{{ asset('/img/avatar0.png') }}" class="user-image" alt="User Image"/>
+          <img src="https://ui-avatars.com/api/?size=128&color=222d32&background=ecf0f5&&name={{ Auth::user()->name }}" class="user-image" alt="User Image"/>
         @else
         <img src="{{ Auth::user()->avatar }}" class="user-image" alt="User Image"/>
         @endif

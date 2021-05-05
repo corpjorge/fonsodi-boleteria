@@ -6,10 +6,12 @@ use Illuminate\Notifications\Notifiable;
 use App\Model\Usuario\Users_detalle;
 use Auth;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
-class User extends Model
+class User extends Model implements AuthenticatableContract
 {
-    use Notifiable;
+    use Notifiable, Authenticatable;
 
     /**
      * The attributes that are mass assignable.

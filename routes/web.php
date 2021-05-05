@@ -8,6 +8,7 @@ Route::get('/', function () {
 Route::post('login_ws', 'Usuario\LoginController@login_ws');
 Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
+    Route::get('/home', 'HomeController@index');
     Route::get('perfil', 'Usuario\Users_detalleController@index');
     Route::get('noasicado', 'Usuario\NoasociadoController@index');
     Route::get('error404', 'Usuario\NoasociadoController@error');
