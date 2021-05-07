@@ -72,6 +72,57 @@ Route::group(['middleware' => 'adminuser'], function () {
     Route::get('admin/{id}', 'Usuario\Users_detalleController@datos');  
     Route::get('datos_usuario/{id}', 'Usuario\Users_detalleController@datosUsuario');
     Route::get('solicitud/comprobante-adm/{id}', 'SolicitudProducto\SolicitudController@show'); 
+    
+    Route::group(['middleware' => 'coordinador'], function () {
+        Route::get('admin_evento', 'Evento\EventoController@indexadmin');
+        Route::get('admin_evento/add', 'Evento\EventoController@create');
+        Route::post('admin_evento/add', 'Evento\EventoController@store');
+        Route::post('admin_evento/estado/{id}', 'Evento\EventoController@estado');
+        Route::get('admin_evento/ver/{id}/edit', 'Evento\EventoController@edit');
+        Route::put('admin_evento/{id}', 'Evento\EventoController@update');
+        Route::get('admin_servicios/clasificados', 'Servicio\ClasificadoController@indexadmin');
+        Route::get('admin_servicios/clasificados/ver/{id}', 'Servicio\ClasificadoController@show');
+        Route::get('admin_servicios/clasificados/ver/{id}/edit', 'Servicio\ClasificadoController@edit');
+        Route::put('admin_servicios/clasificados/{id}', 'Servicio\ClasificadoController@update');
+        Route::get('admin_servicios/pqrs', 'Servicio\PqrsController@create');
+        Route::get('admin_servicios/pqrs/ver/{id}', 'Servicio\PqrsController@show');
+        Route::get('admin_servicios/pqrs/descarga/{id}', 'Servicio\PqrsController@descarga');
+        Route::put('admin_servicios/pqrs/{id}', 'Servicio\PqrsController@update');
+
+        Route::get('solicitudes/solicitados', 'SolicitudProducto\SolicitudController@solicitudes');
+        Route::get('solicitudes/productos', 'SolicitudProducto\ProductoController@index');
+
+
+        Route::get('solicitudes/productos/add', 'SolicitudProducto\ProductoController@create');
+        Route::get('solicitudes/productos/{id}/edit', 'SolicitudProducto\ProductoController@edit');
+        Route::post('solicitudes/productos/update/{id}', 'SolicitudProducto\ProductoController@update');
+        Route::get('solicitudes/productos/actualizar', 'SolicitudProducto\ProductoController@actualizar');
+
+        Route::post('solicitudes/productos/activar/{id}', 'SolicitudProducto\ProductoController@activar');
+        Route::post('solicitudes/productos/add')->uses('SolicitudProducto\ProductoController@store')->name('productos.store');
+
+
+        Route::post('solicitudes/solicitados/aprobar', 'SolicitudProducto\SolicitudController@aprobar');
+        Route::get('solicitudes/solicitados-excel', 'SolicitudProducto\SolicitudController@excel');
+        Route::post('solicitudes/solicitados-excelEstado/{id}', 'SolicitudProducto\SolicitudController@excelEstados');
+        Route::post('solicitudes/solicitados-excelEstadoOtro', 'SolicitudProducto\SolicitudController@excelEstadosOtro');
+        Route::get('solicitudes/solicitados-descarga/{archivo}', 'SolicitudProducto\SolicitudController@descarga');
+        /*jpiedrahita*/
+        Route::get('solicitudes/file')->uses('SolicitudProducto\SolicitudController@file')->name('solicitudes.file');
+        Route::get('solicitudes/file-servicios')->uses('SolicitudProducto\SolicitudController@servicio')->name('solicitudes.file-servicios');
+        Route::get('solicitudes/file-productos')->uses('SolicitudProducto\SolicitudController@producto')->name('solicitudes.file-productos');
+
+        Route::get('solicitudes/solicitados/{id}', 'SolicitudProducto\SolicitudController@solicitudesShow');
+        Route::get('solicitudes/solicitados/ver/{id}', 'SolicitudProducto\SolicitudController@edit');
+        Route::post('solicitudes/solicitados/ver/{id}', 'SolicitudProducto\SolicitudController@update');
+        Route::get('solicitudes/desembolso', 'SolicitudProducto\SolicitudController@desembolso');
+
+        Route::get('solicitudes/desembolso/{id}', 'SolicitudProducto\SolicitudController@desembolsar');
+
+        Route::post('solicitudes/desembolso/{id}', 'SolicitudProducto\SolicitudController@udpateDesembolsar');
+
+
+    });
 
     Route::group(['namespace' => 'Admin_boleteria'], function () {
         Route::group(['middleware' => 'jefe'], function () {

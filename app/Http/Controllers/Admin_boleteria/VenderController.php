@@ -149,7 +149,7 @@ class VenderController extends Controller
 
        if ($servicio->esCorrecto == "true") {
 
-         $referencia = str_random(6).'-'.$request->cedula;
+         $referencia = rand().'-'.$request->cedula;
 
          $venta = new Venta();
          $signacion = new Asignacion;
@@ -257,7 +257,7 @@ class VenderController extends Controller
 
        if ($credito->esCorrecto == "true") {
 
-         $referencia = str_random(6).'-'.$request->cedula;
+         $referencia = rand().'-'.$request->cedula;
 
          $venta = new Venta();
          $signacion = new Asignacion;
