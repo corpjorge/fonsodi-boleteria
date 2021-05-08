@@ -39,8 +39,8 @@
 					 <?php $serialesCantidad = 0; ?>
 					 @foreach ($seriales as $serial)
 						 @if($serial->serial_producto->nombre == $producto->nombre )
-							 <p>
-								 <?php $serialesCantidad = $serialesCantidad+count($serial); ?>
+							 <p>                                                             
+								 <?php $serialesCantidad = $serialesCantidad+1; ?>
 							 </p>
 						 @endif
 						@endforeach
