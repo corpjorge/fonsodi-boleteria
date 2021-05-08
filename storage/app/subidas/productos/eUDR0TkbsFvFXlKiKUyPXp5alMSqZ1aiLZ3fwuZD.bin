@@ -1,0 +1,336 @@
+------------------------------------------------------------------------------------------------
+
+ Citrix Workspace Environment Management Agent Log
+
+------------------------------------------------------------------------------------------------
+
+Log Start : 1:33:08 PM Wednesday, October 14, 2020
+
+
+Agent Version: 1910.1.0.1
+
+1:33:08 PM Event -> MainController.InitAgentLog() : Init Log finished. Now Switching to Main Log...
+1:33:08 PM Event -> MainController.SwitchToMainLog() : Broker Service Name -> 
+1:33:08 PM Event -> MainController.SwitchToMainLog() : Broker Service Port -> 8286
+1:33:08 PM Event -> MainController.SwitchToMainLog() : EnableAgentLogging -> True
+1:33:08 PM Event -> MainController.SwitchToMainLog() : AgentLogFile -> %USERPROFILE%\Citrix WEM Agent.log
+1:33:08 PM Event -> MainController.SwitchToMainLog() : AgentDebugMode -> True
+1:33:08 PM Event -> MainController.SwitchToMainLog() : Detected Agent Connection State -> Online
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected User Name -> SODIMAC\penr09
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Windows Version -> 10.0
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Execution Context -> Published Resource
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Logon Server -> HCBOGDT562.sodimac.corp
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Computer Name -> HCBOGDT2215
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Ip Address -> 10.23.22.215
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected ClientName -> SODIMAC035BW10
+1:33:08 PM Event -> MainController.LogAgentStartupValues() : Detected Client Ip Address -> 192.168.0.2
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Start Menu Folder-> \\FSSERVER\Perfiles2019\penr09\Start Menu
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Start Menu Programs Folder -> \\FSSERVER\Perfiles2019\penr09\Start Menu\Programs
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Start Menu Startup Folder -> \\FSSERVER\Perfiles2019\penr09\Start Menu\Programs\Startup
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Desktop Folder -> C:\Users\penr09\Desktop
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Favorites Folder -> C:\Users\penr09\Favorites
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User AppData Folder -> C:\Users\penr09\AppData\Roaming
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Local AppData Folder -> C:\Users\penr09\AppData\Local
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User QuickLaunch Folder -> C:\Users\penr09\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User TaskBar Pinned Icons Folder -> C:\Users\penr09\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Start Menu Pinned Icons Folder -> C:\Users\penr09\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\StartMenu
+1:33:08 PM Event -> AgentControllersHelper.LogAgentSpecialFolders() : Detected User Implicit App Shortcuts Pinned Icons Folder -> C:\Users\penr09\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\ImplicitAppShortcuts
+1:33:08 PM Event -> AgentControllersHelper.CheckDomainType() : Checking Domain Type...
+1:33:08 PM Event -> AgentControllersHelper.CheckDomainType() : RetrieveDomainType() Result -> Active Directory
+1:33:08 PM Event -> MainController.StartUserGroupsRetrievalASync() : Starting User Groups Extraction...
+1:33:08 PM Event -> VuemAgentConfigurationHelper.RetrieveConfiguredUsers() : Retrieving WEM Users...
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> Everyone (S-1-1-0)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : Item Match Found -> Adding Item to Working Set : Everyone (S-1-1-0)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> BUILTIN\Administrators (S-1-5-32-544)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Calle 80 (S-1-5-21-1170496801-2482589087-207577976-5131)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras CEDIS Funza (S-1-5-21-1170496801-2482589087-207577976-71847)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cali Sur (S-1-5-21-1170496801-2482589087-207577976-5129)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Armenia (S-1-5-21-1170496801-2482589087-207577976-43312)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Barranquilla Calle 30 (S-1-5-21-1170496801-2482589087-207577976-77663)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Barranquilla Centro (S-1-5-21-1170496801-2482589087-207577976-57227)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Barranquilla Norte (S-1-5-21-1170496801-2482589087-207577976-57226)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Bello (S-1-5-21-1170496801-2482589087-207577976-5124)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Bodega Cedi SanDiego (S-1-5-21-1170496801-2482589087-207577976-5054)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Bucaramanga (S-1-5-21-1170496801-2482589087-207577976-5127)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Chia (S-1-5-21-1170496801-2482589087-207577976-42588)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cali Norte (S-1-5-21-1170496801-2482589087-207577976-5128)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Calima (S-1-5-21-1170496801-2482589087-207577976-5130)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras CEDIS (S-1-5-21-1170496801-2482589087-207577976-57132)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cedritos (S-1-5-21-1170496801-2482589087-207577976-5133)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cúcuta (S-1-5-21-1170496801-2482589087-207577976-5134)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Dorado (S-1-5-21-1170496801-2482589087-207577976-5160)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Manizales (S-1-5-21-1170496801-2482589087-207577976-5164)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Molinos (S-1-5-21-1170496801-2482589087-207577976-5165)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Monteria (S-1-5-21-1170496801-2482589087-207577976-5168)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cartagena (S-1-5-21-1170496801-2482589087-207577976-5132)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Cartagena San Fernando (S-1-5-21-1170496801-2482589087-207577976-74525)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Envigado (S-1-5-21-1170496801-2482589087-207577976-28087)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Girardot (S-1-5-21-1170496801-2482589087-207577976-57228)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Ibague Sur (S-1-5-21-1170496801-2482589087-207577976-5162)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Industriales (S-1-5-21-1170496801-2482589087-207577976-1434)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Mosquera (S-1-5-21-1170496801-2482589087-207577976-92171)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Neiva (S-1-5-21-1170496801-2482589087-207577976-5169)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Calle 80 Mercadeo (S-1-5-21-1170496801-2482589087-207577976-110176)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Norte (S-1-5-21-1170496801-2482589087-207577976-5170)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras OAT (S-1-5-21-1170496801-2482589087-207577976-57229)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Palmira (S-1-5-21-1170496801-2482589087-207577976-2766)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Pereira (S-1-5-21-1170496801-2482589087-207577976-5171)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Rionegro (S-1-5-21-1170496801-2482589087-207577976-42554)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras San Juan (S-1-5-21-1170496801-2482589087-207577976-5174)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Santa Marta (S-1-5-21-1170496801-2482589087-207577976-29136)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Bogota Soacha (S-1-5-21-1170496801-2482589087-207577976-5126)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Suba (S-1-5-21-1170496801-2482589087-207577976-5175)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Sur (S-1-5-21-1170496801-2482589087-207577976-5176)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Tintal (S-1-5-21-1170496801-2482589087-207577976-55705)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Tulua el Retiro (S-1-5-21-1170496801-2482589087-207577976-77620)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Valledupar (S-1-5-21-1170496801-2482589087-207577976-2690)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Villavicencio (S-1-5-21-1170496801-2482589087-207577976-5179)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Yopal (S-1-5-21-1170496801-2482589087-207577976-67138)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOG80 (S-1-5-21-1170496801-2482589087-207577976-5083)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BGACO (S-1-5-21-1170496801-2482589087-207577976-5082)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Mercadeo (S-1-5-21-1170496801-2482589087-207577976-5080)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising NVANT (S-1-5-21-1170496801-2482589087-207577976-5095)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MTRNT (S-1-5-21-1170496801-2482589087-207577976-5093)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MDESJ (S-1-5-21-1170496801-2482589087-207577976-5092)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGNT (S-1-5-21-1170496801-2482589087-207577976-5087)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BAQCO (S-1-5-21-1170496801-2482589087-207577976-29437)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising AXMSR (S-1-5-21-1170496801-2482589087-207577976-43134)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising SMRNT (S-1-5-21-1170496801-2482589087-207577976-28750)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CGNA (S-1-5-21-1170496801-2482589087-207577976-53958)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGTL (S-1-5-21-1170496801-2482589087-207577976-52257)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising IBESR (S-1-5-21-1170496801-2482589087-207577976-52596)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGSR (S-1-5-21-1170496801-2482589087-207577976-53955)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGCL (S-1-5-21-1170496801-2482589087-207577976-5084)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising VVOFN (S-1-5-21-1170496801-2482589087-207577976-53967)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising VUDGP (S-1-5-21-1170496801-2482589087-207577976-28735)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MDEML (S-1-5-21-1170496801-2482589087-207577976-53969)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CUCSR (S-1-5-21-1170496801-2482589087-207577976-52595)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGSB (S-1-5-21-1170496801-2482589087-207577976-5088)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising GIRCO (S-1-5-21-1170496801-2482589087-207577976-43524)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MDEBL (S-1-5-21-1170496801-2482589087-207577976-53966)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CLONT (S-1-5-21-1170496801-2482589087-207577976-5090)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MDERN (S-1-5-21-1170496801-2482589087-207577976-43514)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CLOVL (S-1-5-21-1170496801-2482589087-207577976-5091)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BAQNT (S-1-5-21-1170496801-2482589087-207577976-5081)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGSO (S-1-5-21-1170496801-2482589087-207577976-5089)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MZLSR (S-1-5-21-1170496801-2482589087-207577976-5094)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CLOPL (S-1-5-21-1170496801-2482589087-207577976-29679)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CTGLP (S-1-5-21-1170496801-2482589087-207577976-52594)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising PEISR (S-1-5-21-1170496801-2482589087-207577976-53968)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising ENVSR (S-1-5-21-1170496801-2482589087-207577976-19527)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGCT (S-1-5-21-1170496801-2482589087-207577976-5085)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGCH (S-1-5-21-1170496801-2482589087-207577976-43493)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising EYPNT (S-1-5-21-1170496801-2482589087-207577976-44927)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGDD (S-1-5-21-1170496801-2482589087-207577976-5086)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CTGSF (S-1-5-21-1170496801-2482589087-207577976-74538)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BAQ30 (S-1-5-21-1170496801-2482589087-207577976-77765)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising MDEIN (S-1-5-21-1170496801-2482589087-207577976-53965)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CLOTL (S-1-5-21-1170496801-2482589087-207577976-77633)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising CCTA (S-1-5-21-1170496801-2482589087-207577976-53960)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising TNJNT (S-1-5-21-1170496801-2482589087-207577976-91806)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresora Merchandising BOGMS (S-1-5-21-1170496801-2482589087-207577976-92170)
+1:33:08 PM Event -> AgentControllersHelper.CreateWorkingSet() : VUEM Configured Item Found -> SODIMAC\Impresoras Tunja (S-1-5-21-1170496801-2482589087-207577976-91807)
+1:33:08 PM Event -> AgentControllersHelper.SortWorkingSetAccordingToConfiguredPriorities() : Now Sorting Working Set according to Items Priorities...
+1:33:08 PM Event -> AgentControllersHelper.SortWorkingSetAccordingToConfiguredPriorities() : Working Set Completed -> Now Listing for trace purposes
+1:33:08 PM Event -> AgentControllersHelper.SortWorkingSetAccordingToConfiguredPriorities() : Working Set Group Found -> Everyone (S-1-1-0)
+1:33:08 PM Event -> MainController.RetrieveFilterRules() : Starting Filters Rules Retrieval...
+1:33:08 PM Event -> VuemAgentConfigurationHelper.RetrieveVuemFiltersRules() : Retrieving Filters Rules...
+1:33:08 PM Event -> VuemAgentConfigurationHelper.RetrieveVuemFiltersRules() : Filter Rule Found -> Always True (Id:1)
+1:33:08 PM Event -> MainController.RetrieveFilterConditions() : Starting Filters Conditions Retrieval...
+1:33:08 PM Event -> VuemAgentConfigurationHelper.RetrieveVuemFiltersConditions() : Retrieving Filters Conditions...
+1:33:09 PM Event -> VuemAgentConfigurationHelper.RetrieveVuemFiltersConditions() : Filter Condition Found -> Always True (Id:1)
+1:33:09 PM Event -> MainController.ProcessInitialEnvironmentCleanup() : Initial Environment CleanUp  -> Disabled
+1:33:09 PM Event -> MainController.ProcessEnvironmentalSettings() : Starting Environmental Settings Processing...
+1:33:09 PM Event -> VuemAgentHistoryController.GetTaskHistory() : No previously Environmental Settings found for Item : SODIMAC\penr09 (S-1-5-21-1170496801-2482589087-207577976-84857)
+1:33:09 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideCommonPrograms
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideControlPanel
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> RemoveRunFromStartMenu
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideNetworkIcon
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideAdministrativeTools
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideNetworkConnections
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideHelp
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideWindowsUpdate
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideTurnOff
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> ForceLogoff
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideFind
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableRegistryEditing
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableCmd
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoNetConnectDisconnect
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> RemoveContextMenuManageItem
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoProgramsCPL
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoPropertiesMyComputer
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableSilentRegedit
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableCmdScripts
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideDevicesandPrinters
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> HideSystemClock
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> SetDesktopBackGroundColor
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Skip SetDesktopBackGroundColor as cleanup as we did not set it.
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DesktopBackGroundColor
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoPropertiesRecycleBin
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoPropertiesMyDocuments
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoNtSecurity
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableTaskMgr
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> RestrictCpl
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> RestrictCplList
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisallowCpl
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisallowCplList
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableTLcorner
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> DisableCharmsHint
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoTrayContextMenu
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.ExecuteEntityPolicySettings() : Processing Environmental Setting -> NoViewContextMenu
+1:33:10 PM Warning -> VuemEnvironmentalSettingsController.SetClockVisibility() : Enforcing System Clock Display Status : Published Application Detected -> SODIMAC\penr09 -> Exiting
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.RefreshShellSettings() : Refreshing Shell Settings -> Notify_ShellChange()...
+1:33:10 PM Event -> VuemEnvironmentalSettingsController.SaveSettingsHistory() : Saving Environmental Settings Execution History for Item :  -> SODIMAC\penr09
+1:33:10 PM Event -> MainController.ProcessAppLockerSettings() : AppLocker processing is disabled.
+1:33:10 PM Event -> MainController.ProcessEnvironmentVariables() : Environment Variables Processing -> Disabled
+1:33:10 PM Event -> MainController.ProcessUsvSettings() : USV Settings Processing -> Disabled
+1:33:10 PM Event -> MainController.ProcessStandardActions() : Processing Standard Actions for groups in Working Set...
+1:33:10 PM Event -> MainController.ProcessRegistryValues() : Starting Registry Values Processing...
+1:33:10 PM Event -> VuemAgentHistoryController.GetPreviousTasksItems() : No previously Previously Processed Item Found in Assigned Registry Value History
+1:33:10 PM Event -> VuemRegistryValueController.ProcessEntityWorkingSetUpdate() : No Working Set Update Detected for Registry Entrys Processing or Revert Disabled
+1:33:10 PM Event -> VuemRegistryValueController.() : Retrieving Registry Entry List for Everyone (S-1-1-0)...
+1:33:10 PM Event -> VuemRegistryValueController.() : Retrieving Registry Entry Assignments History for Item -> Everyone (S-1-1-0)
+1:33:10 PM Event -> VuemRegistryValueController.RetrieveAssignedEntityTasksList() : Assigned registry values individually in site 1 for S-1-1-0 are 1
+1:33:10 PM Event -> VuemRegistryValueController.RetrieveAssignedEntityTasksList() : Assigned registry values in action group in site 1 for S-1-1-0 are 0
+1:33:10 PM Event -> VuemRegistryValueController.RetrieveAssignedEntityTasksList() : Assigned registry values in action group after conflict process in site 1 for S-1-1-0 are 0
+1:33:11 PM Event -> VuemRegistryValueController.RetrieveAssignedEntityTasksList() : Assigned registry values finally in site 1 for S-1-1-0 are 1
+1:33:11 PM Event -> VuemRegistryValueController.ProcessGenericActionTypesIfAny() : No Generic Registry Entry found for item Everyone (S-1-1-0)
+1:33:11 PM Event -> VuemRegistryValueController.ProcessSingleEntityTask() : Registry Entry -> DisableOptinWizard found for Item: Everyone (S-1-1-0)
+1:33:11 PM Event -> VuemRegistryValueExecutor.ProcessAssociatedTaskMethod() : Processing Registry Entry -> DisableOptinWizard (Id:3)
+1:33:11 PM Event -> VuemFilterController.GetFilterRuleState() : Now Starting Filter Rule Processing -> Filter Rule Id : 1
+1:33:11 PM Event -> VuemFilterController.GetFilterRuleState() : Default 'Always True' Filter Rule (Id:1) Detected -> Returning True Value
+1:33:11 PM Event -> VuemRegistryValueExecutor.ProcessStandardRegistryValue() : Registry Value -> DisableOptinWizard (Id:3) -> Processing Standard Registry Value with Action Type 0...
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : Software\Microsoft\Office\14.0\Common\General
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : ShownFirstRunOptIn
+1:33:11 PM Event -> VuemRegistryValueExecutor.CreateRegistryRootIfNeeded() : Registry Value -> DisableOptinWizard (Id:3) -> Starting Registry Key Creation...
+1:33:11 PM Event -> VuemRegistryValueExecutor.SetRegistryValue() : Registry Value -> DisableOptinWizard (Id:3) -> Opening Subkey...
+1:33:11 PM Event -> VuemRegistryValueExecutor.SetRegistryValue() : Registry Value -> DisableOptinWizard (Id:3) -> Setting Value...
+1:33:11 PM Event -> VuemRegistryValueController.UpdateAssignedTasksHistoryIfNeeded() : Saving Registry Entrys Assignments History for Item -> Everyone (S-1-1-0)
+1:33:11 PM Event -> VuemRegistryValueController.ProcessActionRelatedRefresh() : Registry Entry Processing: No Refresh required -> Exiting
+1:33:11 PM Event -> MainController.DeleteExistingNetworkDrives() : Existing Network Drives Removal -> Disabled
+1:33:11 PM Event -> MainController.ProcessNetworkDrives() : Network Drives Processing -> Disabled
+1:33:11 PM Event -> MainController.ProcessVirtualDrives() : Virtual Drives Processing -> Disabled
+1:33:11 PM Event -> MainController.DeleteExistingNetworkPrinters() : Existing Network Printers Removal -> Disabled
+1:33:11 PM Event -> MainController.ProcessPrinters() : Starting Printers Processing...
+1:33:11 PM Event -> VuemAgentHistoryController.GetPreviousTasksItems() : No previously Previously Processed Item Found in Assigned Printers History
+1:33:11 PM Event -> VuemPrinterController.ProcessEntityWorkingSetUpdate() : No Working Set Update Detected for Printers Processing or Revert Disabled
+1:33:11 PM Event -> VuemPrinterController.() : Retrieving Printer Assignments History for Item -> Everyone (S-1-1-0)
+1:33:11 PM Event -> VuemPrinterController.() : Retrieving Printer List for Everyone (S-1-1-0)...
+1:33:11 PM Event -> VuemPrinterController.RetrieveAssignedEntityTasksList() : Assigned printers individually in site 1 for S-1-1-0 are 0
+1:33:11 PM Event -> VuemPrinterController.RetrieveAssignedEntityTasksList() : Assigned printers in action group in site 1 for S-1-1-0 are 0
+1:33:11 PM Event -> VuemPrinterController.RetrieveAssignedEntityTasksList() : Assigned printers in action group after conflict process in site 1 for S-1-1-0 are 0
+1:33:12 PM Event -> VuemPrinterController.RetrieveAssignedEntityTasksList() : Assigned printers finally in site 1 for S-1-1-0 are 0
+1:33:12 PM Event -> VuemPrinterController.ProcessGenericActionTypesIfAny() : No Generic Printer found for item Everyone (S-1-1-0)
+1:33:12 PM Event -> VuemPrinterController.ProcessItemEntityTasks() : No Printer found for Item -> Everyone
+1:33:12 PM Event -> VuemPrinterController.ProcessActionRelatedRefresh() : Printer Processing: No Refresh required -> Exiting
+1:33:12 PM Event -> PrintersSelfServiceController.SetUserManagedDefaultPrinter() : User Managed Default Printer Processing -> Disabled
+1:33:12 PM Event -> MainController.ProcessPorts() : Ports Processing -> Disabled
+1:33:12 PM Event -> MainController.ProcessFileSystemOperations() : Starting FileSystem Operations Processing...
+1:33:12 PM Event -> VuemAgentHistoryController.GetPreviousTasksItems() : No previously Previously Processed Item Found in Assigned File System Operations History
+1:33:12 PM Event -> VuemFilesystemOperationController.ProcessEntityWorkingSetUpdate() : No Working Set Update Detected for Filesystem Operations Processing or Revert Disabled
+1:33:12 PM Event -> VuemFilesystemOperationController.() : Retrieving Filesystem Operation Assignments History for Item -> Everyone (S-1-1-0)
+1:33:12 PM Event -> VuemFilesystemOperationController.() : Retrieving Filesystem Operation List for Everyone (S-1-1-0)...
+1:33:13 PM Event -> VuemFilesystemOperationController.RetrieveAssignedEntityTasksList() : Assigned file system operations individually in site 1 for S-1-1-0 are 2
+1:33:13 PM Event -> VuemFilesystemOperationController.RetrieveAssignedEntityTasksList() : Assigned file system operations in action group in site 1 for S-1-1-0 are 0
+1:33:13 PM Event -> VuemFilesystemOperationController.RetrieveAssignedEntityTasksList() : Assigned file system operations in action group after conflict process in site 1 for S-1-1-0 are 0
+1:33:13 PM Event -> VuemFilesystemOperationController.RetrieveAssignedEntityTasksList() : Assigned file system operations finally in site 1 for S-1-1-0 are 2
+1:33:13 PM Event -> VuemFilesystemOperationController.ProcessGenericActionTypesIfAny() : No Generic Filesystem Operation found for item Everyone (S-1-1-0)
+1:33:13 PM Event -> VuemFilesystemOperationController.SortActionsListWithAdvancedExecOrder() : Sorting Filesystem Operations List for Everyone...
+1:33:13 PM Event -> VuemFilesystemOperationController.ProcessSingleEntityTask() : Filesystem Operation -> QUERYXEXCEPTION found for Item: Everyone (S-1-1-0)
+1:33:13 PM Event -> VuemFilesystemOperationController.ProcessSingleEntityTask() : Filesystem Operation -> CACHEEXCEL found for Item: Everyone (S-1-1-0)
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.ProcessAssociatedTaskMethod() : Processing Filesystem Operation -> QUERYXEXCEPTION (Id:3)
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.ProcessAssociatedTaskMethod() : Processing Filesystem Operation -> CACHEEXCEL (Id:2)
+1:33:13 PM Event -> VuemFilterController.GetFilterRuleState() : Now Starting Filter Rule Processing -> Filter Rule Id : 1
+1:33:13 PM Event -> VuemFilterController.GetFilterRuleState() : Now Starting Filter Rule Processing -> Filter Rule Id : 1
+1:33:13 PM Event -> VuemFilterController.GetFilterRuleState() : Default 'Always True' Filter Rule (Id:1) Detected -> Returning True Value
+1:33:13 PM Event -> VuemFilterController.GetFilterRuleState() : Default 'Always True' Filter Rule (Id:1) Detected -> Returning True Value
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing HashTags -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Attributes -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Printer Attributes -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing User Parent OU -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Registry Entry -> no match found for : 
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.ExecuteAssociatedTaskMethod() : File System Operation -> QUERYXEXCEPTION (Id:3) -> Processing Action Type 5...
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Xml Value -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing with Ini Value -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Simple String Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing Split Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing String Operations -> no match found for : 
+1:33:13 PM Event -> DynamicTokensController.ReplaceDynamicTokens() : Replacing SubString Operations -> no match found for : 
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.CreateTargetDirectory() : File System Operation -> QUERYXEXCEPTION (Id:3) -> Creating Destination Directory : C:\Users\penr09\AppData\LocalLow\Sun\Java\Deployment\Security
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.ExecuteAssociatedTaskMethod() : File System Operation -> CACHEEXCEL (Id:2) -> Processing Action Type 5...
+1:33:13 PM Event -> VuemFilesystemOperationExecutor.EnsureDestinationDirectoryExistence() : File System Operation -> CACHEEXCEL (Id:2) -> Destination Directory C:\Users\penr09\AppData\Local\Microsoft\Windows\INetCache : Exists
+1:33:13 PM Event -> VuemFilesystemOperationController.UpdateAssignedTasksHistoryIfNeeded() : Saving Filesystem Operations Assignments History for Item -> Everyone (S-1-1-0)
+1:33:13 PM Event -> VuemFilesystemOperationController.ProcessActionRelatedRefresh() : Filesystem Operation Processing: No Refresh required -> Exiting
+1:33:13 PM Event -> MainController.ProcessIniFileOperations() : Ini Files Operations Processing -> Disabled
+1:33:13 PM Event -> MainController.ProcessUserDsns() : User DSNs Processing -> Disabled
+1:33:13 PM Event -> MainController.ProcessFileAssociations() : Files Associations Processing -> Disabled
+1:33:13 PM Event -> MainController.ProcessExternalTasks() : External Tasks Processing -> Disabled
+1:33:13 PM Event -> MainController.DeleteDesktopShortcuts() : Existing Desktop Shortcuts Removal -> Disabled
+1:33:13 PM Event -> MainController.DeleteStartMenuShortcuts() : Existing StartMenu Shortcuts Removal -> Disabled
+1:33:13 PM Event -> MainController.DeleteQuickLaunchShortcuts() : Existing QuickLaunch Shortcuts Removal -> Disabled
+1:33:13 PM Event -> MainController.DeleteStartMenuPinnedShortcuts() : Existing Pinned to Start Menu Shortcuts Removal -> Disabled
+1:33:13 PM Event -> MainController.DeleteTaskBarPinnedShortcuts() : Existing Pinned to TaskBar Shortcuts Removal -> Disabled
+1:33:13 PM Event -> MainController.ProcessApplications() : Applications Processing -> Disabled
+1:33:13 PM Event -> MainController.CleanOrphanedStartMenuDirectories() : Starting Orphaned Start Menu Shortcuts Directories Removal...
+1:33:13 PM Event -> ObjectsCleanupController.DeleteUserOrphanedStartMenuShortcuts() : Removing Orphaned StartMenu Shortcuts -> Processing Root Folder \\FSSERVER\Perfiles2019\penr09\Start Menu
+1:33:13 PM Event -> ObjectsCleanupController.DeleteUserOrphanedStartMenuShortcuts() : Removing Orphaned StartMenu Shortcuts -> Processing Programs Folder \\FSSERVER\Perfiles2019\penr09\Start Menu\Programs
+1:33:13 PM Event -> MainController.ProcessRefreshDesktop() : Desktop Settings Refresh -> Disabled
+1:33:13 PM Event -> MainController.ProcessRefreshAppearance() : Appearance Settings Refresh -> Disabled
+1:33:14 PM Event -> MainController.ProcessRefreshEnvironmentSettings() : Environment Settings Refresh -> Disabled
+1:33:14 PM Event -> MainController.ProcessRefreshSystemSettings() : System Settings Refresh -> Disabled
+1:33:14 PM Event -> UiAgentApplicationContext.BuildAgentContextMenuInternal() : Systray Icon configured to be hidden in published applications -> Disabling Icon and Exiting context menu constructor
+1:33:14 PM Event -> MainController.InternalRun() : Agents Tasks End
+
