@@ -63,12 +63,12 @@
 
 							 <div class="form-group">
 								 <label>Precio de compra und</label>
-								 <input style="color:#555555" type="number" class="form-control" id="Precio_compra" name="precio_compra" placeholder="$ Precio de compra por unidad" >
+								 <input style="color:#555555" type="number" class="form-control" id="Precio_compra" name="precio_compra" placeholder="$ Precio de compra por unidad"  onchange="validarNumero(this)">
 							 </div>
 
 							 <div class="form-group">
 								 <label>Precio al publico und</label>
-								 <input style="color:#555555" type="number" class="form-control" id="Precio_publico" name="precio_publico" placeholder="$ Precio al publico por unidad" >
+								 <input style="color:#555555" type="number" class="form-control" id="Precio_publico" name="precio_publico" placeholder="$ Precio al publico por unidad" onchange="validarNumero(this)"  >
 							 </div>
 
 
@@ -111,11 +111,12 @@
 			return true;
 		}
 		</script>
-
-
-
-
-
 		</div>
 	</div>
+
+<script>
+	function validarNumero(dato) {
+		dato.value = dato.value.replace(/\./g, '');
+	}
+</script>
 @endsection

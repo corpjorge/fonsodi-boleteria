@@ -61,7 +61,7 @@
 
 							 <div class="form-group">
 								 <label>Precio venta und</label>
-								     <input style="color:#555555"  type="number" class="form-control" id="Input1" name="venta" placeholder="$ Precio venta la unidad">
+								     <input style="color:#555555"  type="number" class="form-control" id="Input1" name="venta" placeholder="$ Precio venta la unidad" onchange="validarNumero(this)">
 							 </div>
 
 						{{--@foreach ($productos as $producto)--}}
@@ -94,4 +94,11 @@
 
 		</div>
 	</div>
+
+
+<script>
+	function validarNumero(dato) {
+		dato.value = dato.value.replace(/\./g, '');
+	}
+</script>
 @endsection
