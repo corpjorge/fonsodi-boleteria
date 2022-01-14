@@ -59,7 +59,7 @@
 		         </div>
 
 
-		<div class="col-lg-3 col-xs-6"><div class="small-box bg-aqua"><div class="inner"><h4>BOLETERIA</h4> <p>Modulo de Boletaria</p></div> <div class="icon"><i class="fa fa-ticket"></i></div> <a href="http://fonsodi-boleteria.test/boleteria" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a></div></div>
+		<div class="col-lg-3 col-xs-6"><div class="small-box bg-aqua"><div class="inner"><h4>BOLETERIA</h4> <p>Modulo de Boletaria</p></div> <div class="icon"><i class="fa fa-ticket"></i></div> <a href="/boleteria" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a></div></div>
 
 		<div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-navy">
