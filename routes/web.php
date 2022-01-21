@@ -162,6 +162,7 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::post('admin_boleteria/asignacion/add', 'AsignarController@store');
             Route::get('admin_boleteria/asignacion/ver/{id}', 'AsignarController@show');
             Route::get('admin_boleteria/asignacion/ver/{id}/edit', 'AsignarController@edit');
+            Route::get('admin_boleteria/asignacion/delete', 'AsignarController@delete');
 
             Route::get('admin_boleteria/coordinador/ver/{id}', 'CoordinadorController@coordinadorshow');
 

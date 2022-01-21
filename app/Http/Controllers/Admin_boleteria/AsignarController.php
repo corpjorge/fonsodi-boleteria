@@ -21,10 +21,10 @@ class AsignarController extends Controller
      */
     public function index()
     {
-        $seriales  = Serial::where('estado_actual_id', '!=', 1)->where('admin_user_id', '!=', '')->where('estado_actual_id', '!=', 5)->get();    
-        $productos  = Producto::all();      
-        return view('admin_boleteria.asignacion.asignacion', 
-        ['seriales' => $seriales, 'productos' => $productos]);
+        $seriales = Serial::where('estado_actual_id', '!=', 1)->where('admin_user_id', '!=', '')->where('estado_actual_id', '!=', 5)->get();
+        $productos = Producto::all();
+        return view('admin_boleteria.asignacion.asignacion',
+            ['seriales' => $seriales, 'productos' => $productos]);
     }
 
     /**
@@ -33,17 +33,17 @@ class AsignarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create($id)
-    {        
-        $seriales  = Serial::all()->where('admin_user_id', '=', '')->where('estado_actual_id', '!=', 1)->where('estado_actual_id', '!=', 5)->where('producto_id',$id);
-        $producto  = Producto::find($id);
-        $admin_usuarios  = AdminUser::all();
-        return view('admin_boleteria.asignacion.add', compact('producto'),[ 'seriales' => $seriales, 'admin_usuarios' => $admin_usuarios]);
+    {
+        $seriales = Serial::all()->where('admin_user_id', '=', '')->where('estado_actual_id', '!=', 1)->where('estado_actual_id', '!=', 5)->where('producto_id', $id);
+        $producto = Producto::find($id);
+        $admin_usuarios = AdminUser::all();
+        return view('admin_boleteria.asignacion.add', compact('producto'), ['seriales' => $seriales, 'admin_usuarios' => $admin_usuarios]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -51,33 +51,33 @@ class AsignarController extends Controller
         $signacion = new Asignacion;
         $serial_update = new Serial;
 
-        $seriales=$request->serial;
+        $seriales = $request->serial;
 
         $this->Validate($request, [
-          'usuario' => 'required|',
-          'venta' => 'required|numeric',
-          'serial' => 'required|',
-      ]);
+            'usuario' => 'required|',
+            'venta' => 'required|numeric',
+            'serial' => 'required|',
+        ]);
 
         $fecha_created_at = Carbon::now();
 
         foreach ($seriales as $serials) {
             DB::table('asignaciones')->insert(
-            [
-              'admin_user_id' => $request->usuario,
-              'serial_id' =>  $serials,
-              'estado_id' => 3,
-              'created_at' =>  $fecha_created_at,
-            ]
-        );
+                [
+                    'admin_user_id' => $request->usuario,
+                    'serial_id' => $serials,
+                    'estado_id' => 3,
+                    'created_at' => $fecha_created_at,
+                ]
+            );
             DB::table('seriales')->where('id', $serials)->update(
-            [
-              'admin_user_id' => $request->usuario,
-              'precio_venta' => $request->venta,
-              'estado_actual_id' => 3,
-              'updated_at'    => $fecha_created_at,
-            ]
-        );
+                [
+                    'admin_user_id' => $request->usuario,
+                    'precio_venta' => $request->venta,
+                    'estado_actual_id' => 3,
+                    'updated_at' => $fecha_created_at,
+                ]
+            );
         }
 
         session()->flash('message', 'Guardado correctamente');
@@ -87,19 +87,19 @@ class AsignarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $asignacion  = Asignaciones::find($id);
-        return view('admin_boleteria.asignacion.add', [ 'asignacion' => $asignacion]);
+        $asignacion = Asignaciones::find($id);
+        return view('admin_boleteria.asignacion.add', ['asignacion' => $asignacion]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -109,5 +109,28 @@ class AsignarController extends Controller
         $serial->save();
         session()->flash('message', 'Serial revertido');
         return redirect('admin_boleteria/asignacion');
+    }
+
+    public function delete()
+    {
+        $array = array(
+            '2101865',
+        );
+
+        foreach ($array as &$valor) {
+            $serial = Serial::where('numero', $valor)->first();
+            $asignacion = Asignacion::where('serial_id', $serial->id)->first();
+            if ($asignacion) {
+                echo "'" . $asignacion->id . "'";
+                echo '<br>';
+            } else {
+                if ($serial) {
+                    echo "xxx => '" . $serial->id . "'";
+                    echo '<br>';
+                }
+            }
+
+        }
+
     }
 }
