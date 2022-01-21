@@ -1,13 +1,12 @@
 <?php
- 
- Route::get('/', 'LoginController@redirect');
- Route::get('/login', 'LoginController@login')->name('login');
+
+Route::get('/', 'LoginController@redirect');
+Route::get('/login', 'LoginController@login')->name('login');
 
 Route::post('login_ws', 'Usuario\LoginController@login_ws');
 Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
-   
-    Route::get('/home', 'HomeController@index');    
+    Route::get('/home', 'HomeController@index');
     Route::post('/logout', 'LoginController@logout')->name('logout');
     Route::get('perfil', 'Usuario\Users_detalleController@index');
     Route::get('noasicado', 'Usuario\NoasociadoController@index');
@@ -35,16 +34,16 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('boleteria/ver/pdf/{id}', 'Usuario\BoleteriaController@imp');
         Route::get('boleteria/productos/add', 'Usuario\BoleteriaController@create');
         Route::post('boleteria/productos/add', 'Usuario\BoleteriaController@store');
-        
+
         Route::get('solicitud/productos')->uses('SolicitudProducto\SolicitudController@index')->name('solicitud.index');
-        
+
         Route::get('solicitud/solicitar')->uses('SolicitudProducto\SolicitudController@create')->name('solicitud.create');
-        
+
         Route::post('solicitud/solicitar')->uses('SolicitudProducto\SolicitudController@store')->name('solicitud.store');
 
         Route::post('solicitud/productos/codigo/{id}', 'SolicitudProducto\SolicitudController@codigo');
         Route::get('solicitud/comprobante/{id}', 'SolicitudProducto\SolicitudController@show');
-        
+
         Route::get('predictions/create')->uses('Usuario\PollaController@create')->name('predictions.create');
         Route::post('predictions/store')->uses('Usuario\PollaController@store')->name('predictions.store');
         Route::get('predictions/{polla}')->uses('Usuario\PollaController@show')->name('predictions.show');
@@ -69,10 +68,10 @@ Route::group(['middleware' => 'adminuser'], function () {
     Route::get('admin_home', 'AdminHomeController@index');
     Route::get('admin_perfil', 'Admin\AdminController@index');
     Route::get('datos_admin/{id}', 'Admin\AdminController@ver');
-    Route::get('admin/{id}', 'Usuario\Users_detalleController@datos');  
+    Route::get('admin/{id}', 'Usuario\Users_detalleController@datos');
     Route::get('datos_usuario/{id}', 'Usuario\Users_detalleController@datosUsuario');
-    Route::get('solicitud/comprobante-adm/{id}', 'SolicitudProducto\SolicitudController@show'); 
-    
+    Route::get('solicitud/comprobante-adm/{id}', 'SolicitudProducto\SolicitudController@show');
+
     Route::group(['middleware' => 'coordinador'], function () {
         Route::get('admin_evento', 'Evento\EventoController@indexadmin');
         Route::get('admin_evento/add', 'Evento\EventoController@create');
@@ -129,7 +128,7 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::get('admin_boleteria/inventario', 'InformeController@inventario');
             Route::get('admin_boleteria/inventario/excel/seriales', 'InformeController@serialesexcel');
             Route::get('admin_boleteria/inventario/excel/ventas', 'InformeController@ventasesexcel');
-            Route::get('admin_boleteria/inventario/tenencia', 'InformeController@tenenciaexcel');            
+            Route::get('admin_boleteria/inventario/tenencia', 'InformeController@tenenciaexcel');
             Route::get('admin_boleteria/proveedores', 'ProveedorController@index');
             Route::get('admin_boleteria/proveedores/add', 'ProveedorController@create');
             Route::post('admin_boleteria/proveedores/add/linea', 'ProveedorController@linea');
@@ -147,7 +146,7 @@ Route::group(['middleware' => 'adminuser'], function () {
             Route::get('admin_boleteria/productos/ver/{id}', 'ProductosController@show');
             Route::put('admin_boleteria/productos/{id}', 'ProductosController@update');
             Route::get('admin_boleteria/productos/ver/{id}/edit', 'ProductosController@edit');
-            
+
             Route::get('admin_boleteria/seriales')->uses('SerialController@index')->name('admin_boleteria.seriales');
 
             Route::get('admin_boleteria/seriales/add/', 'SerialController@create');
@@ -189,8 +188,8 @@ Route::group(['middleware' => 'adminuser'], function () {
     });
 
     Route::group(['middleware' => 'subgerente'], function () {
-      Route::resource('admin_config/user', 'Admin\ConfigUserController',['except' => ['destroy']]);
-      Route::resource('admin_config/permisos', 'Admin\ConfigPermisosController',['except' => ['destroy']]);      
+        Route::resource('admin_config/user', 'Admin\ConfigUserController', ['except' => ['destroy']]);
+        Route::resource('admin_config/permisos', 'Admin\ConfigPermisosController', ['except' => ['destroy']]);
     });
 });
 
