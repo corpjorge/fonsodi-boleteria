@@ -31,16 +31,19 @@
                 <input type="email" class="form-control" placeholder="email" name="email"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="password" name="password"/>
+            <div class="form-group has-feedback" style="margin-bottom: 1px">
+                <input type="password" class="form-control" placeholder="password" name="password" id="password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
-            <div class="row">                 
+            <a style="font-size: 11px; cursor: pointer" onclick="seePass()">Ver contraseña</a><br>
+            <div class="row" style="margin-top: 15px">
                 <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div><!-- /.col -->
             </div>
         </form>
+
+{{--            <span class="glyphicon glyphicon-eye-open form-control-feedback" style="cursor: pointer"></span>--}}
 
         @include('admin-auth.partials.social_login')
 
@@ -60,6 +63,14 @@
                 increaseArea: '20%' // optional
             });
         });
+
+        function seePass() {
+            let password = document.getElementById("password");
+            if(password.type === 'password'){
+                return password.attributes["type"].value = "text";
+            }
+            password.attributes["type"].value = "password";
+        }
     </script>
 </body>
 
