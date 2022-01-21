@@ -12,22 +12,12 @@ use Carbon\Carbon;
 
 class SerialController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $seriales = Serial::where('admin_user_id', '=', '')->get();
         return view('admin_boleteria.seriales.seriales', ['seriales' => $seriales]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Request $request)
     {
         $productos = Producto::all();
@@ -45,12 +35,6 @@ class SerialController extends Controller
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $serial = new Serial;
@@ -132,12 +116,6 @@ class SerialController extends Controller
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function storeNo(Request $request)
     {
         $this->Validate($request, [
@@ -170,13 +148,6 @@ class SerialController extends Controller
         return redirect('admin_boleteria/seriales');
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Serial $serial
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $serial = Serial::find($id);
@@ -184,12 +155,6 @@ class SerialController extends Controller
         return view('admin_boleteria.seriales.ver', compact('serial'), ['asignaciones' => $asignaciones]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Serial $serial
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $serial = Serial::find($id);
@@ -197,13 +162,7 @@ class SerialController extends Controller
         return view('admin_boleteria.seriales.update', compact('serial'), ['productos' => $productos]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Serial $serial
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $serial = Serial::find($id);
