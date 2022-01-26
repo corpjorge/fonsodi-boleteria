@@ -146,16 +146,22 @@ class AsignarController extends Controller
 
         foreach ($array as &$valor) {
             $serial = Serial::where('numero', $valor)->first();
-            $asignacion = Asignacion::where('serial_id', $serial->id)->first();
-            if ($asignacion) {
-                echo "'" . $asignacion->id . "'";
-                echo '<br>';
-            } else {
-                if ($serial) {
-                    echo "xxx => '" . $serial->id . "'";
+            if ($serial) {
+                $asignacion = Asignacion::where('serial_id', $serial->id)->first();
+
+                if ($asignacion) {
+                    echo "'" . $asignacion->id . "'";
                     echo '<br>';
+                } else {
+                    if ($serial) {
+                        echo "xxx => '" . $serial->id . "'";
+                        echo '<br>';
+                    }
                 }
+            } else {
+                echo 'dddd '.$valor;
             }
+
 
         }
 
